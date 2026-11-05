@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b1220">
+  <meta name="description" content="Olushina Akeem's interactive academic planner. Add, organize, and complete study tasks.">
+  <title>Academic Planner — Olushina Akeem</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Short+Stack&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header"><nav class="nav wrap" aria-label="Main navigation"><a class="brand" href="index.html" aria-label="Olushina Akeem, home"><img class="brand-image" src="assets/images/bird.jpg" alt=""><span class="brand-name">Olushina Akeem</span></a><div class="nav-links"><a href="index.html">Home</a><a href="academic.html">Academic profile</a><a href="projects.html">Projects</a><a href="planner.html" aria-current="page">Planner</a><a class="nav-contact" href="contact.html">Contact</a></div></nav></header>
+  <main>
+    <section class="page-hero page-hero-compact"><div class="wrap"><p class="eyebrow">Plan · Focus · Progress</p><h1>Make room for<br><em>steady progress.</em></h1><p class="hero-intro">A simple study planner to help organize coursework, stay on top of deadlines, and keep moving forward.</p></div></section>
+    <section class="section section-white planner-section"><div class="wrap">
+      <div class="planner-summary"><div><span class="summary-label">Your study tasks</span><strong id="task-count">0</strong><span>total</span></div><div><span class="summary-label">Completed</span><strong id="completed-count">0</strong><span>done</span></div><div class="progress-summary"><span class="summary-label">Overall progress</span><strong id="progress-label">0%</strong><span class="progress-track"><span id="progress-bar"></span></span></div></div>
+      <div class="planner-layout">
+        <section class="planner-form-card" aria-labelledby="add-task-heading"><p class="eyebrow">Add to your plan</p><h2 id="add-task-heading">One step at a time.</h2><form id="task-form">
+          <label for="task-title">Task <span aria-hidden="true">*</span></label><input id="task-title" name="title" type="text" maxlength="100" placeholder="e.g. Finish web technologies assignment" required>
+          <div class="form-row"><div><label for="task-course">Course / subject <span aria-hidden="true">*</span></label><input id="task-course" name="course" type="text" maxlength="60" placeholder="e.g. COS 106" required></div><div><label for="task-due">Due date <span aria-hidden="true">*</span></label><input id="task-due" name="dueDate" type="date" required></div></div>
+          <label for="task-priority">Priority</label><select id="task-priority" name="priority"><option value="normal">Normal</option><option value="high">High</option><option value="low">Low</option></select>
+          <button class="button button-primary submit-button" type="submit">Add study task <span class="arrow" aria-hidden="true">+</span></button><p class="form-help">Tasks are saved in this browser on this device.</p><p class="form-status" id="planner-status" aria-live="polite"></p>
+        </form></section>
+        <section class="task-panel" aria-labelledby="task-list-heading"><div class="task-panel-head"><div><p class="eyebrow">Your checklist</p><h2 id="task-list-heading">Study tasks</h2></div><button class="clear-button" id="clear-completed" type="button">Clear completed</button></div>
+          <div class="filter-row" role="group" aria-label="Filter study tasks"><button class="filter-button is-active" type="button" data-filter="all" aria-pressed="true">All <span id="all-filter-count">0</span></button><button class="filter-button" type="button" data-filter="active" aria-pressed="false">To do</button><button class="filter-button" type="button" data-filter="completed" aria-pressed="false">Done</button></div>
+          <ul class="task-list" id="task-list" aria-live="polite"></ul><div class="empty-state" id="empty-state"><span class="empty-icon" aria-hidden="true">✳</span><h3>No tasks yet</h3><p>Add a study task to start organizing your week.</p></div>
+        </section>
+      </div>
+      <p class="storage-note"><strong>Your privacy:</strong> planner items stay in your browser’s local storage and are not sent to a server. Clearing browser data will remove them.</p>
+    </div></section>
+  </main>
+  <footer class="footer"><div class="wrap footer-inner"><p class="copyright">© <span data-current-year>2026</span> Olushina Akeem. Made with curiosity.</p><nav class="footer-links" aria-label="Footer navigation"><a href="index.html">Home</a><a href="academic.html">Academic profile</a><a href="projects.html">Projects</a><a href="contact.html">Contact</a></nav></div></footer>
+</body>
+</html>
